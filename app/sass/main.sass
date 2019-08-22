@@ -301,6 +301,10 @@ input[type="number"]
 	font-family: $g-bold
 .it
 	font-family: $p-reg
+.fz18
+	font-size: 18px
+.fz20
+	font-size: 20px
 .tac
 	text-align: center
 .tal
@@ -401,6 +405,12 @@ input[type="number"]
 			&__decor
 				background-color: $green
 				transition: .1s all ease
+	&_pdf
+		&__svg
+			stroke: #948254
+		&:hover
+			.btn_pdf__svg
+				fill: #000
 	&_sub
 		min-width: 190px
 		.btn__in
@@ -632,7 +642,6 @@ input[type="number"]
 		&_2
 			bottom: -160px
 .main
-	background-image: url('../img/main__bg.jpg')
 	@include cv
 	background-attachment: fixed
 	position: relative
@@ -919,6 +928,9 @@ input[type="number"]
 			opacity: .8
 .prod
 	overflow: hidden
+	&_about
+		.section__subttl-decor
+			fill: $brown
 	.container
 		position: relative
 	&__decor
@@ -1377,7 +1389,134 @@ input[type="number"]
 			box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25)
 			border-radius: 4px
 			margin-top: 1px
-			// &:hover
-			// 	svg
-			// 		stroke: $green
-			// 		transform: scale(1.2)
+.crumbs
+	display: flex
+	flex-wrap: wrap
+	margin-bottom: 25px
+	margin-left: 0
+	padding: 0
+	list-style-type: none
+	li
+		color: #000
+		a
+			color: #000
+			&:hover
+				color: $green
+		&:not(:last-child)
+			margin-right: 30px
+			position: relative
+			&::after
+				content: ''
+				position: absolute
+				width: 13px
+				height: 17px
+				top: 2px
+				right: -23px
+				@include ct
+				background-image: url('../img/icon__crumbs-decor.svg')
+		&:last-child
+			text-decoration: underline
+.contacts
+	&__soc
+		&-ttl
+			font-size: 30px
+			color: $brown
+		.soc
+			&__item
+				font-size: 14px
+				font-family: $g-reg
+				letter-spacing: .5px
+				text-align: center
+				display: inline-block
+				width: 60px
+				height: 60px
+				margin: 3px
+				position: relative
+				outline: none
+				transition: .4s all ease
+				&-in
+					position: relative
+					border: 2px solid $brown
+					padding: 15px 20px
+					height: 100%
+					overflow: hidden
+					transition: .4s all ease
+					display: flex
+					justify-content: center
+					align-items: center
+					&-svg
+						fill: $brown
+				&-svg
+					fill: none
+					stroke: $brown
+					stroke-width: 2
+					stroke-linecap: round
+					stroke-linejoin: round
+					padding: 3px
+					background-color: $gr
+					border-radius: 50%
+					position: absolute
+					z-index: 1
+					transition: .4s all ease
+					&_1
+						top: -9px
+						left: -9px
+					&_2
+						top: -9px
+						right: -9px
+						transform: scaleX(-1)
+					&_3
+						bottom: -9px
+						left: -9px
+						transform: scaleY(-1)
+					&_4
+						bottom: -9px
+						right: -9px
+						transform: scale(-1,-1)
+				&-decor
+					position: absolute
+					width: 28px
+					height: 28px
+					background-color: $brown
+					transition: .4s all ease
+					&_1
+						top: -14px
+						left: -13px
+						border-bottom-right-radius: 50%
+					&_2
+						top: -14px
+						right: -13px
+						border-bottom-left-radius: 50%
+					&_3
+						bottom: -14px
+						left: -13px
+						border-top-right-radius: 50%
+					&_4
+						bottom: -14px
+						right: -13px
+						border-top-left-radius: 50%
+				span
+					color: $brown
+					position: relative
+					font-family: $g-bold
+					text-transform: uppercase
+				&:hover
+					.soc__item
+						&-in
+							border-color: $green
+							background-color: $green
+							&-svg
+								fill: #fff
+						&-svg
+							stroke: $green !important
+							&_1
+								transform: rotate(260deg)
+							&_2
+								transform: scaleX(-1) rotate(260deg)
+							&_3
+								transform: scaleY(-1) rotate(260deg)
+							&_4
+								transform: scale(-1,-1) rotate(260deg)
+						&-decor
+							background-color: $green
+							transition: .1s all ease
