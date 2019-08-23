@@ -1520,3 +1520,58 @@ input[type="number"]
 						&-decor
 							background-color: $green
 							transition: .1s all ease
+.about
+	&__gal
+		&-item
+			height: 300px
+			@include cv
+			&:hover
+				opacity: .7
+	&-char
+		&__table
+			th
+				padding: 8px 10px 12px
+			td
+				padding: 8px 10px
+				&:first-child
+					width: 60%
+				&:last-child
+					width: 40%
+			tbody
+				tr
+					&:nth-child(odd)
+						background-color: #94825417
+					&:nth-child(even)
+						background-color: #fff
+				td
+					&:first-child
+						width: 60%
+						border-right: 2px solid #E5E5E5
+.clients
+	.section
+		&__ttl,
+		&__subttl
+			color: $brown
+			&-decor
+				max-width: 400px
+				fill: $brown
+	.prod__item-in
+		@include cv
+	&__video
+		height: 500px
+		width: 100%
+		display: block
+		@include cv
+		position: relative
+		img
+			position: absolute
+			left: 50%
+			top: 50%
+			transform: translate(-50%,-50%)
+			opacity: .5
+			filter: grayscale(100%)
+			transition: .6s all ease-in-out
+		&:hover
+			img
+				opacity: 1
+				filter: grayscale(0)
