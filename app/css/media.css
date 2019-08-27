@@ -162,6 +162,12 @@
         -ms-transform: scale(0.7);
             transform: scale(0.7);
   }
+  .btn_tour-img {
+    width: 90%;
+  }
+  .offer__banner {
+    min-height: 100px;
+  }
 }
 
 @media screen and (max-width: 425px) {
