@@ -101,4 +101,26 @@ $(function() {
     $('.menu').toggleClass('active');
     $('body').toggleClass('fixed');
   });
+
+  //svg meat
+  $('.meat__img-circle').hover(function(){
+    $('.meat__img-item').removeClass('active');
+    $('.meat__img-circle').removeClass('active');
+    $('.meat__popup').removeClass('active');
+    $('.meat__popup-item').removeClass('active');
+    $(this).toggleClass('active');
+
+    var Meat = $(this).attr('data-meat');
+    var top = $(this).position().top;
+    var left = $(this).position().left;
+    
+    $('.meat__popup').offset({
+      top: top + 22,
+      left: left - 373
+    });
+    $('.meat__popup').addClass('active');
+    $('.meat__img-item[data-meat="'+Meat+'"]').toggleClass('active');
+    $('.meat__popup-item[data-meat="'+Meat+'"]').addClass('active');
+    // console.log(Meat);
+  });
 });

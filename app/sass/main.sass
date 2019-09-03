@@ -297,8 +297,12 @@ input[type="number"]
   color: $brown
 .lbrown
   color: $lbrown
+.black
+  color: #000
 .b
   font-family: $g-bold
+.reg
+  font-family: $g-reg
 .it
   font-family: $p-reg
 .fz14
@@ -320,6 +324,8 @@ input[type="number"]
   text-decoration-color: $dark
 .upp
   text-transform: uppercase
+.ttn
+  text-transform: none !important
 .btn
   font-size: 14px
   font-family: $g-reg
@@ -1621,9 +1627,30 @@ input[type="number"]
         filter: grayscale(0)
 .weight
   &__slider
+    &-wrp
+      height: 100%
+      position: relative
+      .owl-stage-outer,
+      .owl-stage,
+      .owl-item
+        height: 100%
+      .btn__svg
+        &_1
+          left: 0
+          top: -10px
+        &_2
+          right: 7px
+          top: -10px
+        &_3
+          left: 0
+          bottom: -10px
+        &_4
+          right: 7px
+          bottom: -10px
     &-item
       width: 100%
-      height: 415px
+      min-height: 415px
+      height: 100%
       @include cv
     .owl-nav
       button
@@ -1723,3 +1750,62 @@ div
               &::before
                 background: url('../img/icon__arrow.svg') no-repeat 50% 50% / contain
                 transform: scaleX(-1)
+.meat
+  &__img
+    margin-left: auto
+    margin-right: auto
+    display: block
+    fill: none
+    position: relative
+    &-wrp
+      overflow: hidden
+    circle
+      transition: .4s all ease
+      cursor: pointer
+      position: relative
+      z-index: 2
+    path
+      transition: .7s all ease
+    &-item
+      fill: #E5E5E5
+      &.active
+        fill: $green
+    &-circle
+      fill: #fff
+      &.active
+        fill: $brown
+  &__popup
+    width: 100%
+    max-width: 380px
+    // min-height: 400px
+    position: absolute
+    z-index: 1
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.25)
+    opacity: 0
+    &-item
+      display: none
+      &.active
+        display: block
+    &:hover
+      .btn
+        &__in
+          border-color: $brown
+          background-color: #fff
+          span
+            color: #000
+        &__svg
+          stroke: $brown !important
+          &_1
+            transform: rotate(260deg)
+          &_2
+            transform: scaleX(-1) rotate(260deg)
+          &_3
+            transform: scaleY(-1) rotate(260deg)
+          &_4
+            transform: scale(-1,-1) rotate(260deg)
+        &__decor
+          background-color: $brown
+          transition: .1s all ease
+    &.active
+      transform: translateY(0)
+      opacity: 1
