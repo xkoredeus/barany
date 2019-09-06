@@ -694,6 +694,27 @@ input[type="number"] {
   fill: #000;
 }
 
+.btn_warn .btn__in {
+  background-color: #fff;
+}
+
+.btn_warn:hover .btn__svg {
+  stroke: #948254 !important;
+}
+
+.btn_warn:hover .btn__in {
+  background-color: #fff;
+  border-color: #948254;
+}
+
+.btn_warn:hover .btn__in span {
+  color: #948254;
+}
+
+.btn_warn:hover .btn__decor {
+  background-color: #948254;
+}
+
 .btn_sub {
   min-width: 190px;
 }
@@ -1005,8 +1026,10 @@ input[type="number"] {
 }
 
 .owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next {
+  width: 38px;
+  height: 38px;
   top: 50%;
-  margin-top: -28px;
+  margin-top: -19px;
   position: absolute;
   background-color: #948254;
   border-radius: 50%;
@@ -1692,46 +1715,6 @@ input[type="number"] {
   border-top-left-radius: 50%;
 }
 
-.prod__item:hover .prod__item-in {
-  border-color: #5BEE61;
-  background-color: #fff;
-}
-
-.prod__item:hover .prod__item-svg {
-  stroke: #5BEE61 !important;
-}
-
-.prod__item:hover .prod__item-svg_1 {
-  -webkit-transform: rotate(260deg);
-      -ms-transform: rotate(260deg);
-          transform: rotate(260deg);
-}
-
-.prod__item:hover .prod__item-svg_2 {
-  -webkit-transform: scaleX(-1) rotate(260deg);
-      -ms-transform: scaleX(-1) rotate(260deg);
-          transform: scaleX(-1) rotate(260deg);
-}
-
-.prod__item:hover .prod__item-svg_3 {
-  -webkit-transform: scaleY(-1) rotate(260deg);
-      -ms-transform: scaleY(-1) rotate(260deg);
-          transform: scaleY(-1) rotate(260deg);
-}
-
-.prod__item:hover .prod__item-svg_4 {
-  -webkit-transform: scale(-1, -1) rotate(260deg);
-      -ms-transform: scale(-1, -1) rotate(260deg);
-          transform: scale(-1, -1) rotate(260deg);
-}
-
-.prod__item:hover .prod__item-decor {
-  background-color: #5BEE61;
-  -webkit-transition: .1s all ease;
-  -o-transition: .1s all ease;
-  transition: .1s all ease;
-}
-
 .prod__item-ttl {
   font-family: "GothamPro-Bold";
   text-align: center;
@@ -1870,6 +1853,10 @@ input[type="number"] {
 .life__item-descr {
   font-size: 16px;
   color: #40454A;
+}
+
+.life .btn__in {
+  background-color: #E5E5E5;
 }
 
 .sale {
@@ -2728,8 +2715,11 @@ input[type="number"] {
           filter: grayscale(0);
 }
 
-.weight__slider-wrp {
+.weight__slider {
   height: 100%;
+}
+
+.weight__slider-wrp {
   position: relative;
 }
 
@@ -2804,6 +2794,12 @@ input[type="number"] {
 
 .news__item-info {
   padding: 15px;
+}
+
+.news-page__in {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 4px;
 }
 
 div.pagination {

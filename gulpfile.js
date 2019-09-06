@@ -32,12 +32,11 @@ gulp.task('scripts', function() {
 	return gulp.src([ // Берем все необходимые библиотеки
 		'app/libs/jquery/jquery.min.js',
 		'app/libs/fancybox/jquery.fancybox.min.js',
-		'app/libs/owl.carousel/owl.carousel.min.js'
+		'app/libs/owl.carousel/owl.carousel.min.js',
+		'app/libs/maskedinput/maskedinput.js'
 		])
 		.pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
 		// .pipe(uglify()) // Сжимаем JS файл
-		// .pipe(plumber())
-		// .pipe(coffee())
 		.pipe(gulp.dest('app/js')); // Выгружаем в папку app/js
 });
 

@@ -432,6 +432,20 @@ input[type="number"]
     &:hover
       .btn_pdf__svg
         fill: #000
+  &_warn
+    .btn__in
+      background-color: #fff
+    &:hover
+      .btn
+        &__svg
+          stroke: $brown !important
+        &__in
+          background-color: #fff
+          border-color: $brown
+          span
+            color: $brown
+        &__decor
+          background-color: $brown
   &_sub
     min-width: 190px
     .btn__in
@@ -631,8 +645,10 @@ input[type="number"]
         right: -45px
       &.owl-prev,
       &.owl-next
+        width: 38px
+        height: 38px
         top: 50%
-        margin-top: -28px
+        margin-top: -19px
         position: absolute
         background-color: $brown
         border-radius: 50%
@@ -1058,24 +1074,24 @@ input[type="number"]
         bottom: -14px
         right: -13px
         border-top-left-radius: 50%
-    &:hover
-      .prod__item
-        &-in
-          border-color: $green
-          background-color: #fff
-        &-svg
-          stroke: $green !important
-          &_1
-            transform: rotate(260deg)
-          &_2
-            transform: scaleX(-1) rotate(260deg)
-          &_3
-            transform: scaleY(-1) rotate(260deg)
-          &_4
-            transform: scale(-1,-1) rotate(260deg)
-        &-decor
-          background-color: $green
-          transition: .1s all ease
+    // &:hover
+    //   .prod__item
+    //     &-in
+    //       border-color: $green
+    //       background-color: #fff
+    //     &-svg
+    //       stroke: $green !important
+    //       &_1
+    //         transform: rotate(260deg)
+    //       &_2
+    //         transform: scaleX(-1) rotate(260deg)
+    //       &_3
+    //         transform: scaleY(-1) rotate(260deg)
+    //       &_4
+    //         transform: scale(-1,-1) rotate(260deg)
+    //     &-decor
+    //       background-color: $green
+    //       transition: .1s all ease
       
     &-ttl
       font-family: $g-bold
@@ -1153,6 +1169,8 @@ input[type="number"]
     &-descr
       font-size: 16px
       color: $dark
+  .btn__in
+    background-color: #E5E5E5
 .sale
   position: relative
   overflow: hidden
@@ -1627,8 +1645,8 @@ input[type="number"]
         filter: grayscale(0)
 .weight
   &__slider
+    height: 100%
     &-wrp
-      height: 100%
       position: relative
       .owl-stage-outer,
       .owl-stage,
@@ -1679,6 +1697,11 @@ input[type="number"]
       +cv
     &-info
       padding: 15px
+  &-page
+    &__in
+      padding: 20px
+      background-color: #fff
+      border-radius: 4px
 div
   &.pagination
     display: flex

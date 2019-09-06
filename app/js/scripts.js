@@ -8,8 +8,8 @@ $(function() {
       loop: false,
       margin: 30,
       navText: [
-        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 56" width="33" height="56"><use xlink:href="#slider_arrow-left"></use></svg>',
-        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 56" width="33" height="56"><use xlink:href="#slider_arrow-right"></use></svg>',
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 56" width="22" height="23"><use xlink:href="#slider_arrow-left"></use></svg>',
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 56" width="22" height="23"><use xlink:href="#slider_arrow-right"></use></svg>',
       ],
       responsive : {
         0   : {
@@ -29,7 +29,8 @@ $(function() {
             nav: true,
         },
         1040 : {
-            items: 3
+            items: 3,
+            nav: true,
         }
       }
   });
@@ -40,8 +41,8 @@ $(function() {
       nav: true,
       dots: false,
       navText: [
-        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 56" width="33" height="30"><use xlink:href="#slider_arrow-left"></use></svg>',
-        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 56" width="33" height="30"><use xlink:href="#slider_arrow-right"></use></svg>',
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 56" width="15" height="23"><use xlink:href="#slider_arrow-left"></use></svg>',
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 56" width="15" height="23"><use xlink:href="#slider_arrow-right"></use></svg>',
       ]
   });
   // tabs 
@@ -123,4 +124,7 @@ $(function() {
     $('.meat__popup-item[data-meat="'+Meat+'"]').addClass('active');
     // console.log(Meat);
   });
+
+  
+  $('.input__wrp_tel input').mask('+7 (999) 999-99-99');
 });
